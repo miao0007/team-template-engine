@@ -1,0 +1,26 @@
+{
+  "name": "template-engine",
+  "version": "1.0.0",
+  "description": " a software engineering team generator command line application",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "keywords": [
+    "node.js",
+    "jest"
+  ],
+  "author": "jeff miao",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.1.0"
+  },
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
