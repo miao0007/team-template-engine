@@ -7,8 +7,8 @@
         <div class="card-body bg-light mt-3 mb-3">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><b>ID:</b> {{ id }}</li>
-                <li class="list-group-item"><b>Email:</b> {{ email }}</li>
-                <li class="list-group-item"><b>GitHub:</b> {{ github }}</li>
+                <li class="list-group-item"><b>Email:</b><a href="mailto:{{ email }}">{{ email }}</a></li>
+                <li class="list-group-item"><b>GitHub:</b><a href="https://github.com/{{ github }}" target="_blank" rel="noopener noreferrer">{{ github }}</a></li>
             </ul>
         </div>
     </div>
