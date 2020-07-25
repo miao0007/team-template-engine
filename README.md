@@ -1,6 +1,6 @@
 # team-template-engine
 
-![GitHub](https://img.shields.io/badge/license-ISC-blue)
+![GitHub](https://img.shields.io/badge/license-MIT-blue)
 
 # Team Template Engine
 ## Description
