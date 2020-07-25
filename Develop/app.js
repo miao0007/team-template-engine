@@ -7,7 +7,7 @@ const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const render = require("./lib/htmlRenderer");
 
-
+// General questions for all employee
 const employeeQuestions = [{
     type: "input",
     message: "What is team member name: ",
@@ -27,6 +27,7 @@ const employeeQuestions = [{
     validate: validateEmail
 }];
 
+// Specific questions for manager
 const managerQuestions = [{
     type: "input",
     message: "What is manager's office number: ",
@@ -34,6 +35,7 @@ const managerQuestions = [{
     validate: validateName
 }];
 
+// Specific questions for engineer
 const engineerQuestions = [{
     type: "input",
     message: "The engineer's github link: ",
@@ -41,6 +43,7 @@ const engineerQuestions = [{
     validate: validateName
 }];
 
+// Specific questions for intern
 const internQuestions = [{
     type: "input",
     message: "What is intern's school: ",
@@ -48,11 +51,14 @@ const internQuestions = [{
     validate: validateName
 }];
 
+
+
 let fullQuestions = [];
 const manager = [];
 const engineers = [];
 const interns = [];
 
+// Gathering information based on employee type and generate objects
 function getRole() {
     inquirer.prompt(
         {
@@ -88,6 +94,7 @@ function getRole() {
     });
 }
 
+// Based on employee type, generate different card info
 function getData(title) {
     inquirer.prompt(fullQuestions).then(function (data) {
         const { name, id, email, officeNum, github, school } = data;
@@ -111,6 +118,7 @@ function getData(title) {
 
 }
 
+// render generated employee information cards into team.html
 async function renderHTML(){
     console.log("getting ready to render HTML");
     try {
@@ -132,6 +140,7 @@ async function renderHTML(){
     
 };
 
+// handling input data validation
 function onValidation(err, val) {
     if (err) {
         console.log(err.message);
