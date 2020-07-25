@@ -1,3 +1,4 @@
+// Create Engineer object constructor inherit from Employee
 const Employee = require("./Employee")
 
 class Engineer extends Employee {

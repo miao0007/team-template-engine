@@ -1,3 +1,4 @@
+// Create Employee object constructor
 class Employee {
     constructor(name, id, email, role) {
       this.name = name;
