@@ -152,7 +152,7 @@ function onValidation(err, val) {
 
     return valid;
 }
-
+// import Joi module for data validation
 function validateTitle(title) {
     return joi.validate(title, joi.array().min(1), onValidation);
 }
