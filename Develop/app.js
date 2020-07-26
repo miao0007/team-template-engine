@@ -154,7 +154,7 @@ function onValidation(err, val) {
 }
 // import Joi module for data validation
 function validateTitle(title) {
-    return joi.validate(title, joi.array().min(1), onValidation);
+    return joi.validate(title, joi.array().min(1).required(), onValidation);
 }
 
 function validateName(name) {
@@ -162,11 +162,11 @@ function validateName(name) {
 }
 
 function validateID(id) {
-    return joi.validate(id, joi.number().integer().min(1).max(999999), onValidation);
+    return joi.validate(id, joi.number().integer().min(1).max(999999).required(), onValidation);
 }
 
 function validateEmail(email) {
-    return joi.validate(email, joi.string().email({ minDomainSegments: 2 }), onValidation);
+    return joi.validate(email, joi.string().email({ minDomainSegments: 2 }).required(), onValidation);
 }
 
 // back to start
